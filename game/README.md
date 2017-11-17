@@ -2,8 +2,6 @@
 
 This is the final project for CS 441: Programming Languages and Applications taught by Professor Brian Hare.
 
-The following is the game logic per the project guidelines.
-
 THE PROBLEM:
 Consider a simple game consisting of a series of n coins (n is even) of various denominations laid in a
 row. (For our purposes, the denominations do not have to match any actual real-world coins, but all
