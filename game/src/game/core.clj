@@ -4,11 +4,14 @@
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
-  ;; ask user for name of file to open
+  ;; Ask user for name of file to open
   (do
-  	(println "Enter the name of the file...")
+  	(println "Enter the name of the file (with the extension)...")
   	(let [fileName (read-line)]
-  		(println (str "Opening '" fileName "'..."))))
+  		(println (str "Opening '" fileName "'..."))
+  		;; File path for debbugging purposes
+  		;;(println(System/getProperty "user.dir"))
 
-  ;; open file and store in s
-  (def currentFile (slurp fileName)))
+  		;; Open file and store contents in var currentFile
+  		(def currentFile (slurp (str "src/game/files/"fileName))))
+  		(println currentFile)))
