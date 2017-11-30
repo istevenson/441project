@@ -30,14 +30,25 @@
   		(println (str "Player 1:" (math/abs -2) "points"))
   		(println (str "Player 2: points"))
 
-  		(defn PickCoin []
-  			(def optA (first coinList))
-  			(def optB (last coinList))
-  			(def choice(if (< 10 8) "optB" "optA"))
-  			(println choice)
-  		)
+  		;; Sum even indices in list of coins
+  		(defn sumEvens [max]
+  		  (reduce +
+  		    (for [i (range max) :when (even? i)] 
+  		      i
+		    )
+  		  )
+		)
+  		(sumEvens 10)
 
-  		(PickCoin)
+  		;; Sum odd indices in list of coins
+  		(defn sumOdds [max]
+  		  (reduce +
+  		    (for [i (range max) :when (odd? i)] 
+  		      i
+		    )
+  		  )
+		)
+  		(sumEvens 10)
 	)
 ))
 
